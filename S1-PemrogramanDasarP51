@@ -1,0 +1,38 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum51 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int angkaMenu, b, inputUser, min, max, mean,jumlah;
+        min = 99999999;
+        max = -99999999;
+        mean = 0;
+        jumlah =0;
+
+        System.out.print("Masukkan jumlah angka : ");
+        angkaMenu = input.nextInt();
+
+        for (b = 1; b <= angkaMenu; b++) {
+            System.out.print("Masukkan angka ke-" + b + ":");
+            inputUser = input.nextInt();
+
+            if (inputUser <= min) {
+                min = inputUser;
+            }
+            if (inputUser >= max) {
+                max = inputUser;
+            }
+            
+            jumlah = jumlah +inputUser;
+            mean = (jumlah) / angkaMenu;
+        }
+
+        System.out.println("Nilai terkecil : " + min);
+        System.out.println("Nilai terbesar :  " + max);
+
+        System.out.println("rata-rata : " + mean);
+    }
+}
