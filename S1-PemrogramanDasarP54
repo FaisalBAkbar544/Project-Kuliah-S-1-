@@ -1,0 +1,25 @@
+ackage Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum54 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int totalAngka, a, angkaAwal = 0, angkaKedua = 1, fibon;
+
+        System.out.print("Banyak bilangan Fibonnaci : ");
+        totalAngka = input.nextInt();
+
+        for (a = 1; a <= totalAngka; a++) {
+            System.out.print(angkaAwal + " ");
+            fibon = angkaAwal + angkaKedua;
+            angkaAwal = angkaKedua;
+            angkaKedua = fibon;
+
+        }
+        System.out.print("Program telah selesai");
+
+    }
+
+}
