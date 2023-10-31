@@ -1,0 +1,49 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum4 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double sisiA;
+        double sisiB;
+        double sisiC;
+
+        System.out.println("Program Mencari Nilai Segitiga : ");
+        System.out.println("> Cari nilai sisi A");
+        System.out.println("> Cari nilai sisi B");
+        System.out.println("> Cari nilai sisi C");
+        System.out.print("Apa nilai sisi yg Anda cari (1,2,3) : ");
+        int pilihan = in.nextInt();
+
+        switch (pilihan) {
+            case 1:
+                System.out.print("Masukkan nilai sisi B : ");
+                sisiB = in.nextDouble();
+                System.out.print("Masukkan nilai sisi C : ");
+                sisiC = in.nextDouble();
+                double hasilA = Math.sqrt((sisiB * sisiB) + (sisiC * sisiC));
+                System.out.println("Nilai sisi A adalah : " + hasilA);
+                break;
+            case 2:
+                System.out.print("Masukkan nilai sisi A : ");
+                sisiA = in.nextDouble();
+                System.out.print("Masukkan nilai sisi C : ");
+                sisiC = in.nextDouble();
+                double hasilB = Math.sqrt((sisiA * sisiA) + (sisiC * sisiC));
+                System.out.println("Nilai sisi B adalah : " + hasilB);
+                break;
+            case 3:
+                System.out.print("Masukkan nilai sisi A : ");
+                sisiA = in.nextDouble();
+                System.out.print("Masukkan nilai sisi B : ");
+                sisiB = in.nextDouble();
+                double hasilC = Math.sqrt((sisiA * sisiA) + (sisiB * sisiB));
+                System.out.println("Nilai sisi C adalah : " + hasilC);
+                break;
+            default:
+                System.out.println("Eror 404 not found");
+        }
+    }
+}
