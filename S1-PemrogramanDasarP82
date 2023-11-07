@@ -1,0 +1,80 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum82 {
+
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int r = 0, tinggi = 0, luasL, luasST, luasPT, menu, proses1 = 0, proses2 = 0, pi = (int) 3.14, proses = 0;
+
+        do {
+            System.out.println("Menu");
+            System.out.println("1. Input jari-jari : ");
+
+            System.out.println("2. Input tinggi : ");
+
+            System.out.println("3. Hitung luas lingkaran : ");
+
+            System.out.println("4. Hitung luas selimut tabung : ");
+
+            System.out.println("5. Hitung luas permukaan tabung : ");
+
+            System.out.println("6. Keluar ");
+            System.out.println("Menu : ");
+            menu = inp.nextInt();
+            if (menu == 1) {
+                System.out.print("Input jari-jari : ");
+                r = inp.nextInt();
+
+            } else if (menu == 2) {
+                System.out.print("Input tinggi : ");
+                tinggi = inp.nextInt();
+
+            } else if (menu == 3) {
+                if (r != 0) {
+                    //method pemanggil
+                    System.out.println("Luas lingkaran : " + luasLingkaran(pi, r));
+                } else {
+                    System.out.println("Anda belum memasukkan jari-jari ");
+                }
+
+            } else if (menu == 4) {
+                if (r != 0 && tinggi != 0) {
+                    System.out.println("Selimut Tabung : " + selimutTabung(r, r, pi));
+                } else {
+                    System.out.println("Anda belum memasukkan jari-jari dan tinggi ");
+                }
+            } else if (menu == 5) {
+                if (r != 0 && tinggi != 0) {
+                    //method pemanggil
+                    System.out.println("Luas Permukaan Tabung : " + luasPermukaanTabung(r, r, pi));
+                } else {
+                    System.out.println("Anda belum memasukkan jari-jari dan tinggi ");
+
+                }
+
+            } else if (menu == 6) {
+                System.out.println("Anda telah keluar");
+                break;
+            } else {
+                System.out.println("Menu yang anda masukkan tidak valid");
+            }
+        } while (proses != 6);
+
+    }
+
+    public static double luasLingkaran(double pi, int r) {
+        return pi * r * r;
+    }
+
+    public static double selimutTabung(int r, int t, double pi) {
+        return 2 * pi * r * r * t;
+    }
+
+    public static double luasPermukaanTabung(int r, int t, double pi) {
+        return 2 * luasLingkaran(pi, r) + selimutTabung(r, t, pi);
+
+    }
+
+}
