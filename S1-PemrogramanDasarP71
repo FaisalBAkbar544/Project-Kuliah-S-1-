@@ -1,0 +1,87 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum71 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int pilihMenu, bil1, bil2;
+        System.out.println("=======Kalkulator====");
+        System.out.print("Masukkan Bilangan 1 :");
+        bil1 = in.nextInt();
+        System.out.print("Masukkan Bilangan 2 :");
+        bil2 = in.nextInt();
+
+        System.out.println("Pilih Menu (1/2/3/4)");
+        System.out.println("1. Tambah/Kurang\t 2. Ganjil Genap\t 3. positif negatif\t 4. program berhenti");
+        pilihMenu = in.nextInt();
+
+        if (pilihMenu == 1) {
+            tambahKurang(bil1, bil2);
+        } else if (pilihMenu == 2) {
+            genapGanjil(bil1, bil2);
+        } else if (pilihMenu == 3) {
+            positifNegatif(bil1, bil2);
+        } else if (pilihMenu == 4) {
+            System.out.println("Program Berhenti");
+            
+            //stop
+        } else {
+            System.out.println("Bukan Menu");
+        }
+
+    }
+
+    static void tambahKurang(int bil1, int bil2) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Pilih 1. Tambah\t 2. Kurang :");
+        int pilihMenu1 = in.nextInt();
+        double hasil = 0;
+        String proses = null;
+        if (pilihMenu1 == 1) {
+            hasil = bil1 + bil2;
+            proses = "penambahan";
+
+        } else if (pilihMenu1 == 2) {
+            hasil = bil1 - bil2;
+            proses = "pengurangan";
+
+        }
+        System.out.println("Hasil dari " + proses + " antara " + bil1 + " dan " + bil2 + " adalah " + hasil);
+
+    }
+
+    static void genapGanjil(int bil1, int bil2) {
+        if (bil1 % 2 == 0) {
+            System.out.println(bil1 + " adalah bilangan genap");
+        } else {
+            System.out.println(bil1 + " adalah bilangan ganjil");
+        }
+
+        if (bil2 % 2 == 0) {
+            System.out.println(bil2 + " adalah bilangan genap");
+        } else {
+            System.out.println(bil2 + " adalah bilangan ganjil");
+        }
+    }
+
+    static void positifNegatif(int bil1, int bil2) {
+        if (bil1 > 0) {
+            System.out.println(bil1 + "adalah bilangan positif");
+        } else if (bil1 < 0) {
+            System.out.println(bil1 + " adalah bilangan negatif");
+        } else if (bil1 == 0) {
+            System.out.println(" Bilangan nol");
+        }
+        if (bil2 > 0) {
+            System.out.println(bil2 + " adalah bilangan positif");
+        } else if (bil2 < 0) {
+            System.out.println(bil2 + " adalah bilangan negatif");
+        } else if (bil2 == 0) {
+            System.out.println(" Bilangan nol");
+
+        }
+
+    }
+}
