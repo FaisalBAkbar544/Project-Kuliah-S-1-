@@ -1,0 +1,76 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum61 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        Scanner input2 = new Scanner(System.in);
+        int pilihMenu, back = 3, kali = 0;
+        String nama = null, nim = null;
+
+        do {
+            System.out.println("============================");
+            System.out.println("Menu : ");
+            System.out.println("1. Daftar\t" + "2. Login\t");
+            System.out.print("Silahkan pilih : ");
+            pilihMenu = input.nextInt();
+            System.out.println("============================");
+            
+            if (pilihMenu == 1) {
+                System.out.println("=========================");
+                System.out.println("Anda mendaftar");
+                System.out.print("Masukkan Nama : ");
+                nama = input.next();
+                System.out.print("\nMasukkan NIM : ");
+                nim = input2.nextLine();
+                System.out.println("=========================");
+                System.out.println("Anda berhasil mendaftar");
+                
+            } else if (pilihMenu == 2) {
+
+                if (!(nama == null || nim == null)) {
+                    System.out.println("==============================");
+                    System.out.print("Masukkan Nama : ");
+                    String cekNama = input.next();
+
+                    System.out.print("Masukkan NIM : ");
+
+                    String cekNim = input2.nextLine();
+                    System.out.println("==============================");
+                    if (cekNama.equalsIgnoreCase(nama) && cekNim.equalsIgnoreCase(nim)) {
+                        System.out.println(nama + " dengan NIM." + nim + " Anda berhasil login");
+                        back = 0;
+                        break;
+
+                    } else {
+                        back--;
+                        kali++;
+                        if (kali == 3) {
+                            System.out.println("Anda salah 3 kali, akun anda diblokir");
+                        } else {
+                           
+                            System.out.println("================================");
+                            System.out.println("Anda salah " + kali + "X, kesempatan login " + back + "X lagi");
+                            System.out.println("================================");
+
+                        }
+
+                    }
+
+                } else {
+                    System.out.println("Maaf anda belum terdaftar");
+                }
+
+                
+            } else {
+                System.out.println("Menu yang anda masukkan tidak valid");
+                
+            }
+
+        } while (back != 0);
+
+    }
+}
