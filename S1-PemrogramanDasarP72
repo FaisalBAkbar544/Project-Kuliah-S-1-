@@ -1,0 +1,62 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum72 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int bil1, bil2;
+        System.out.println("=====Cek Bilangan====");
+        System.out.print("Masukkan bilangan : ");
+        bil1 = in.nextInt();
+        prima(bil1);
+        fibonnaci(bil1);
+    }
+
+    static void prima(int bil1) {
+        boolean primaCek = true;
+        if (bil1 <= 1) {
+            primaCek = false;
+
+        } else {
+            for (int i = 2; i <= bil1 / 2; i++) {
+                if (bil1 % 2 == 0) {
+                    primaCek = false;
+                    break;
+                }
+
+                if (primaCek) {
+                    System.out.println(bil1 + " Merupakan bilangan prima");
+
+                } else {
+                    System.out.println(bil1 + " bukan merupakan bilangan prima");
+
+                }
+            }
+        }
+
+    }
+
+    static void fibonnaci(int bil1) {
+        boolean fibonCek = false;
+        int angkaAwal = 0, fibon = 0, angkaKedua = 1;
+        for (int a = 1; a <= bil1; a++) {
+            if (bil1 == angkaAwal) {
+                fibonCek = true;
+                break;
+            }
+            fibon = angkaAwal + angkaKedua;
+            angkaAwal = angkaKedua;
+            angkaKedua = fibon;
+
+        }
+        if (fibonCek == true) {
+            System.out.println(bil1 + " Merupakan fibonnaci");
+        } else {
+            System.out.println(bil1 + " Bukan merupakan fibonnaci");
+        }
+
+    }
+
+}
