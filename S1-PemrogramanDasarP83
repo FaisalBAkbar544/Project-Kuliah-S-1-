@@ -1,0 +1,42 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum83 {
+
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int a, r, n;
+        System.out.println("Hitung Deret Geometri");
+        System.out.print("a : ");
+        a = inp.nextInt();
+        System.out.print("r : ");
+        r = inp.nextInt();
+        System.out.print("n : ");
+        n = inp.nextInt();
+
+        System.out.println("Jumlah " + n + " Suku pertama adalah " + (hitungGeometri(a, r, n)));
+
+    }
+
+    public static int hitungGeometri(int a, int r, int n) {
+        int rn = 1;
+        int i = n;
+        int Sn = 0;
+        while (i > 0) {
+            rn *= r;
+            i--;
+        }
+
+        if (r > 1) {
+            Sn = a * (rn - 1) / (r - 1);
+            return Sn;
+
+        } else if (r < 1) {
+            Sn = a * (1 - rn) /(1 - r);
+            return Sn;
+        }
+        return Sn;
+    }
+
+}
