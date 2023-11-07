@@ -1,0 +1,31 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum81 {
+
+    public static void main(String[] args) {
+
+        Scanner inp1 = new Scanner(System.in);
+        int tahunLahir;
+        String nama;
+        System.out.print("Masukkan nama : ");
+        nama = inp1.nextLine();
+
+        System.out.print("Masukkan tahun lahir : ");
+        tahunLahir = inp1.nextInt();
+        int umur = 2023 - tahunLahir;
+        System.out.println(keterangan(nama, umur, tahunLahir));
+
+    }
+
+    public static String keterangan(String nama, int umur, int tahunLahir) {
+        System.out.println("===============================");
+        System.out.println("Nama : " + nama);
+        System.out.println("Tahun Lahir : " + tahunLahir);
+
+        return "Umur " + nama + " adalah " + umur;
+
+    }
+
+}
