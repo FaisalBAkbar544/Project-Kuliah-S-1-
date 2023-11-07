@@ -1,0 +1,25 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum63 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int pilih, anu =0;
+
+        do {
+            System.out.println("Menu :");
+            System.out.println("1. Lanjut\t" + "2. Berhenti");
+            System.out.print("Silahkan pilih : ");
+            pilih = input.nextInt();
+
+            if (pilih == 2) {
+                System.out.println("Program Berhenti");
+                break;
+            } 
+
+        } while (pilih != 2 );
+    }
+
+}
