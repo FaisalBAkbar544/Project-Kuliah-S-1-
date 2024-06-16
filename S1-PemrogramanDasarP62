@@ -1,0 +1,27 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum62 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int nilaiAwal = 1, agk1, hasil;
+
+        System.out.print("Masukkan sebuah angka : ");
+        agk1 = input.nextInt();
+
+        while (true) {
+            hasil = (agk1 - nilaiAwal);
+
+            if (agk1 == 1) {
+                System.out.println("Bunga mawar mekarlah," + agk1 + " Layu 1 habis semua");
+                break;
+            }
+
+            System.out.println("Bunga mawar mekarlah " + agk1 + " Layu 1 tinggalah " + hasil);
+            agk1--;
+
+        }
+
+    }

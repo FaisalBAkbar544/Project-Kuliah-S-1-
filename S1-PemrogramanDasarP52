@@ -1,0 +1,25 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum52 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int inputUser;
+        System.out.print("Masukkan tinggi segitiga : ");
+        inputUser = input.nextInt();
+
+        System.out.println(" ");
+        for (int i = 1; i <= inputUser; i++) {
+            for (int j = i; j <=inputUser;j++) {
+                System.out.print(" ");
+            }
+            for (int e = 0 ; e <= (i*2)-2; e++) {
+                System.out.print("*");
+            
+            }
+            System.out.println(" ");
+        }
+    }
+}

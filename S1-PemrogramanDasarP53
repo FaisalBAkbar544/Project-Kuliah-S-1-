@@ -1,0 +1,25 @@
+package Praktikums1;
+
+import java.util.Scanner;
+public class Praktikum53 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int bilangan, jmlhAngka;
+        
+        System.out.print("Masukkan bilangan : ");
+        int bil1 = input.nextInt();
+       
+        for (bilangan = 1; bilangan <=bil1; bilangan++){
+            if (bilangan %2 == 0 && bilangan %3 ==0) {
+                System.out.println(bilangan + " kelipatan dua dan tiga");
+            }else if (bilangan %2 == 0) {
+                System.out.println(bilangan + " Kelipatan dua");
+            }else if (bilangan %3== 0) {
+                System.out.println(bilangan + " Kelipatan tiga");
+            }else if (bilangan %5 ==0) {
+                System.out.println(bilangan + " Kelipatan lima");
+                
+            }else{
+                System.out.println(bilangan);
+            
+            }

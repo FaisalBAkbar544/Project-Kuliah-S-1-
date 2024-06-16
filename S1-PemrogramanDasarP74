@@ -1,0 +1,84 @@
+package Praktikums1;
+
+import CobaCoba.java;
+import java.util.Scanner;
+
+public class Praktikum74 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int pilihMenu;
+        double pi = 3.14, radius = 0, panjangsi = 0;
+        int a = 0;
+        do {
+            System.out.println("Menu : (1/2/3/4) ");
+            System.out.println("1. Input nilai radius dan nilai panjang sisi");
+            System.out.println("2. Hitung luas dan Keliling Lingkaran");
+            System.out.println("3. Hitung luas dan keliling Segitiga Sama Siku");
+            System.out.println("4. Hitung panjang L jika : ");
+            System.out.println("5. Keluar");
+            System.out.print("Pilih Menu : ");
+            pilihMenu = in.nextInt();
+           
+            switch (pilihMenu) {
+                case 1:
+                    radius = input();
+                    panjangsi = input1();
+                    break;
+                case 2:
+                    luasKeliling(radius, panjangsi);
+                    break;
+                case 3:
+                    segitiga(radius, panjangsi);
+                    break;
+                case 4:
+                    panjang(radius, panjangsi);
+                    break;
+                case 5:
+                    a =1;
+                    break;
+                default:
+                    System.out.println("Yang anda masukkan bukan Menu");
+                    break;
+            }
+        } while (a !=1);
+
+    }
+
+    static double input() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input nilai Radius : ");
+        return in.nextDouble();
+    }
+
+    static double input1() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input nilai panjang sisi : ");
+        return in.nextDouble();
+
+    }
+
+    static void luasKeliling(double radius, double pi) {
+        double luasL = pi * (radius * radius);
+        System.out.println("Luas Lingkaran : " + luasL);
+
+        double kelilingL = 2 * pi * radius;
+        System.out.println("Keliling Lingkaran : " + kelilingL);
+
+    }
+
+    static void segitiga(double radius, double panjangsi) {
+        double LuasS = 0.5 * panjangsi * (radius * 2);
+        System.out.println("Luas Segitiga : " +LuasS);
+        double KelilingS = Math.sqrt(Math.pow(panjangsi / 2, 2) + Math.pow((radius * 2), 2));
+        System.out.println("Keliling Segitiga : " +KelilingS);
+    }
+
+    static void panjang(double radius, double panjangsi) {
+        double diameter = radius * 2;
+        System.out.println("Diameter : " + diameter);
+        double panjangLingkaran = diameter + panjangsi + radius;
+        System.out.println("Panjang L :" + panjangLingkaran);
+
+    }
+}

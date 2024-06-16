@@ -1,0 +1,40 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class praktikum34 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int beli, stok1, stok2, jumlah, harga, hasil, diskon, menit;
+        stok1 = 150;
+        diskon = 0;
+
+        System.out.println("==========Toko Buah A==========");
+        System.out.println("Enter Jumlah pembelian = ");
+        beli = input.nextInt();
+
+        System.out.print("Enter Menit = ");
+        menit = input.nextInt();
+
+        System.out.println("===============================");
+
+        if (menit >= 40 && menit <= 80) {
+            diskon = (menit / 40) * 5;
+        }
+
+        stok2 = stok1 - beli;
+        jumlah = (beli * 100000) - (diskon * 1000 * beli);
+
+        if (menit <= 420 && menit != 0) {
+            System.out.println("Jumlah pembelian = " + beli);
+            System.out.println("Stok tersisa = " + stok2);
+            System.out.println("Hasil pembelian = Rp" + jumlah);
+        } else if (menit > 420) {
+            System.out.println("Toko sudah ditutup ");
+        } else if (menit == 0) {
+            System.out.println("ERROR - Inputan Invalid !");
+        }
+    }
+
+}
