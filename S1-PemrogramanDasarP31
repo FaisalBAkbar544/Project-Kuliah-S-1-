@@ -1,0 +1,17 @@
+package Praktikums1;
+import java.util.Scanner;
+
+public class praktikum31{
+     public static void main(String[]args){
+        Scanner input = new Scanner(System.in);
+        int bil1;
+        
+        
+        System.out.println("Nilai = ");
+        bil1 = input.nextInt();
+        
+        if (bil1% 5 ==  0 && bil1 %2 !=0 ){     
+        System.out.println("Program Started");
+        } else {
+        System.out.println(" Program Halted");
+        }

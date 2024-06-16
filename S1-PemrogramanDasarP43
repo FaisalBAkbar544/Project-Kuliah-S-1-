@@ -1,0 +1,48 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum43 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String bulan1, muharam, safar, rabiulAwal, rabiulAkhir, jumadilAwal, jumadilAkhir, rajab, syaban, ramadan, syawal, zulkaidah, zulhijah;
+
+        System.out.println("Kalendar Hijriah");
+        System.out.print("KETIK NAMA BULAN : ");
+        bulan1 = in.nextLine();
+
+        switch (bulan1) {
+            case "muharram":
+            case "rabiul awal":
+
+            case "jumadil awal":
+
+            case "rajab":
+
+            case "zulkaidah":
+                System.out.println("Jumlah hari pada bulan " + bulan1 + " 29 hari");
+                break;
+            case "rabiul akhir":
+
+            case "safar":
+
+            case "jumadil akhir":
+
+            case "syaban":
+
+            case "ramadan":
+
+            case "syawal":
+                System.out.println("Jumlah hari pada bulan " + bulan1 + " 30 hari");
+                break;
+            case "zulhijjah":
+                System.out.println("Jumlah hari pada bulan " + bulan1 + " 29/30 hari");
+                break;
+            default:
+                System.out.println("Inputan tidak sesuai");
+
+        }
+    }
+}
+

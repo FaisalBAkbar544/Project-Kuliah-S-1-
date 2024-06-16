@@ -1,0 +1,32 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class praktikum33 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int barang = 0;
+        int tambahanBarang = 0;
+        int bDiskon = 0;
+        System.out.println("======Selamat datang di toko Charlie=====");
+
+        System.out.println("Banyak Pembelian Barang : ");
+        int barang1 = input.nextInt();
+
+        if (barang1 >= 3) {
+            tambahanBarang = barang1 / 3;
+        }
+        if (barang1 % 7 == 0) {
+            bDiskon = barang1 / 7;
+        }
+
+        int total = (barang1 + tambahanBarang);
+        System.out.println("======================");
+        System.out.println("Cashback : " + (bDiskon * 5500));
+        System.out.println("Tambahan Barang : " + tambahanBarang);
+        System.out.println("Jumlah barang : " + total);
+
+    }
+
+}

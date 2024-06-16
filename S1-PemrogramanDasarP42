@@ -1,0 +1,62 @@
+package Praktikums1;
+
+import java.util.Scanner;
+
+public class Praktikum42 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String jawaban1, jawaban2, jawaban3;
+
+        System.out.println("Kerjakan soal berikut ");
+
+        System.out.println("1. Pada tahun berapa FMIPA ULM didirikan...");
+        System.out.println("A. 11 September 2004");
+        System.out.println("B. 11 September 2003");
+        System.out.println("C. 11 September 2002");
+        System.out.println("D. 11 September 2001");
+        System.out.println("KETIK JAWABAN ANDA : ");
+        jawaban1 = in.nextLine();
+
+        System.out.println("2. Siapa dekan Fakultas FMIPA ULM saat ini");
+        System.out.println("A. Dr. Achmad Faishal, S.H, M.H");
+        System.out.println("B. Prof.Dr. Abdul Halim Barkartullah, S.Ag.,S.H,M. Hum");
+        System.out.println("C. Prof. Dr.H.Sutarto Hadi, M.Si.,M.Sc.,Ph.D");
+        System.out.println("D. Dr.Drs.Abdul Gafur,M.Si.,M.Sc.,Ph.D");
+        System.out.println("KETIK JAWABAN ANDA : ");
+        jawaban2 = in.nextLine();
+        switch (jawaban1.toUpperCase()) {
+            case "A":
+                System.out.println("1.Jawaban anda salah");
+                break;
+            case "B":
+                System.out.println("1.Jawaban anda salah");
+                break;
+            case "C":
+                System.out.println("1.Jawaban anda salah");
+                break;
+            case "D":
+                System.out.println("1.Jawaban anda benar");
+                break;
+            default:
+                System.out.print("1.Ini bukan sebuah jawaban ");
+
+        }
+        switch (jawaban2.toUpperCase()) {
+            case "A":
+                System.out.println("2.Jawaban anda salah");
+                break;
+            case "B":
+                System.out.println("2.Jawaban anda salah");
+                break;
+            case "C":
+                System.out.println("2.Jawaban anda salah");
+                break;
+            case "D":
+                System.out.println("2.Jawaban anda benar");
+                break;
+            default:
+                System.out.print("2.Ini bukan sebuah jawaban ");
+        }
+    }
+}
